@@ -26,27 +26,26 @@ int main(int argc, char *argv[]) {
 			testcase[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-int u = 0, n = 1, a[20], count = 1;
+		int j = 0, n = 1, a[100], count = 1;
     while (n != 0) {
         scanf("%d",&n);
-        a[u] = n;
-        u++;
+        a[j] = n;
+        j++;
         count++;
     }
     
     int max = 0, min = 0;
-    for (u = 0; u < count; u++){
-        if (a[u] != 0){
-            if (max < a[u]){
-                max = a[u];
+    for (j = 0; j < count; j++){
+        if (a[j] != 0){
+            if (max < a[j]){
+                max = a[j];
             }
-            if (a[u] < min){
-                min = a[u];
+            if (a[j] < min){
+                min = a[j];
             }
         }
     }
-    printf("Max = %d", max);
-    printf("\nMin = %d", min);
-
+    printf("Max: %d", max);
+    printf("\nMin: %d", min);
 	return 0;
 }
